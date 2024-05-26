@@ -1,0 +1,54 @@
+1.DISPLAY SCREEN
+3 string are used with unique ids and the ids are used in js portion
+first string takes the input
+second string displays expression
+third string display output
+input tag is used and id is saved expression so that we can append more values
+
+2.BUTTONS
+5x4 buttons are used.
+data-event_key for respective buttons is mentioned=> customed data attribute
+all stylings are done using internal css
+
+3.JQUERY FOR HANDLING KEY EVENTS
+a> keypress=> 
+whenever the key is pressed the data-event_key is activated and whatever is pressed is appended as long as it lies in given range
+range(48,57) and (96,105) all inclusive are for numbers
+if the entered button is an operator then it generates expression
+
+b> keyup=>
+used to deactivate the button otherwise it will be continuously pressed
+
+c> click=>
+the first two functions r used for keyboard button and this one is used for clicking the buttons we created
+event_key means that it is a key and it is assigned to a user defined variable
+if key is a number then it is appended
+if it is an operator then it generates expression
+if it is equal to then it evaluates
+if it is delete then it clears the SCREEN
+
+4.JAVASCRIPT functions
+a> appendNumber(number)
+$("#number_div").html(); this will assign the html content of the element to variable
+currentString is watever we pass to the function
+output is empty
+if number exists then it checks whether its 0 or some other number and appends it
+else it will append current to output
+
+b> generateExpression(operator)
+existing number is the input
+expression is initialised as empty
+.val() gets the value of input
+if the saved expression is defined then it will convert the number to integer becoz we initially take input in string format and then the operator is appended
+
+c> evaluateExpression()
+no parameters in this function
+we retrieve the saved expression, existing number
+if expresseion is defined then we convert existing number to integer and append it to expression and store it in expression
+eval() is built in function used to evaluate arithmetic expression
+
+d> clearCalci()
+all the fields of screen are made empty
+
+
+
